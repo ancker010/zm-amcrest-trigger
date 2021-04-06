@@ -1,0 +1,14 @@
+version: '2'
+services:
+  zm-amcrest-trigger:
+    image: hardenrm/zm-amcrest-trigger
+    networks:
+      - traefik-ext
+    container_name: zm-amcrest-trigger-d2
+    volumes:
+      - /storage/zm-amcrest-trigger/zm-amcrest-trigger.conf:/app/zm-amcrest-trigger.conf:z
+    restart: unless-stopped
+
+networks:
+  traefik-ext:
+    external: true
