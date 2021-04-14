@@ -22,6 +22,10 @@ Use at your own risk.
 
 #### Example Config File
 ```
+[zmat]
+debug = false
+retry = 60
+
 [zm]
 host = zoneminder.example.com
 port = 6802
